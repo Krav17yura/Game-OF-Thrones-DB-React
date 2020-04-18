@@ -1,17 +1,35 @@
-import React from 'react';
+import React from 'react'
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import App from './components/app'
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+ReactDOM.render(<App/>, document.getElementById("root"));
+
+
+
+/*
+const getResourse = async(url) => {
+  const res = await fetch(url);
+  const body = await res.text();
+  return body
+}
+
+getResourse('https://jsonplaceholder.typicode.com/posts/2')
+.then((body) => {
+  console.log(body);
+})
+ .catch((err) => {
+     console.log(err);
+   }) */
+
+/* fetch('https://swapi.co/api/people/1/')
+   .then((res) => {
+     return res.json();
+   })
+   .then((body) => {
+     console.log(body);
+   })
+   .catch((err) => {
+     console.log(err);
+   })
+ */
